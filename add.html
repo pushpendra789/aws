@@ -1,0 +1,44 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+<h1> Add Storage</h1>
+<p>Your instance will be launched with the following storage device settings. You can attach additional EBS volumes and instance store volumes to your instance, or edit the settings of the root volume. You can also attach additional EBS volumes after launching an instance, but not instance store volumes.</p>
+<table style="width:100%">
+
+<tr>
+    <th>Volume Type</th>
+    <th>Device</th> 
+    <th>Snapshot</th>
+    <th>Size(GiB)</th>
+    <th>Volume Type</th>
+    <th>IOPS</th>
+    <th>Throughput (MB/s)</th>
+    <th>Delete on Termination</th>
+    <th>Encrypted</th>
+</tr>
+<tr>
+<td>
+Root
+</td>
+<td>
+/dev/sda1</td>
+<td>snap-0280599e37cd696fa</td>
+<td><input type="text" name="cmd"></td>
+<td><select><option value="General Purpose SSD(gp2)">General Purpose SSD(gp2)</option>
+<option value="Provisioned IOPS SSD (io1)">Provisioned IOPS SSD (io1)</option></select>
+</td>
+<td></td>
+<td>N/A</td>
+<td><input type="checkbox" name="cmd"></td>
+<td>Not Encrypted</td>
+</tr>
+</body>
+</html>
