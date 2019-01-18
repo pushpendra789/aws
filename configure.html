@@ -1,0 +1,48 @@
+<html>
+<body>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+}
+</style>
+</head>
+<h1>
+Step 3: Configure Instance Details</h1>
+<p>
+Configure the instance to suit your requirements. You can launch multiple instances from the same AMI, request Spot instances to take advantage of the lower pricing, assign an access management role to the instance, and more.</p>
+<table>
+<tr>
+<td>
+<b>Number of instance</td><td>   <input type ="number" name="cmd"></td></tr>
+<tr>
+<td>
+<b>Purchasing option</td><td>  <input type ="checkbox" name="cmd">Request spot instances</td></tr>
+<tr>
+<td>
+<b>Network </td><td> <select><option value="vpc-975c7eff(default)"> vpc-975c7eff(default) </option></select></td></tr>
+<tr>
+<td>
+<b>Subnet</td><td>  <select><option value="No preference (default subnet in any Availability Zone)"> No preference (default subnet in any Availability Zone)</option>
+<option value="subnet-471e552f | Default in ap-south-1a"> subnet-471e552f | Default in ap-south-1a</option>
+<option value="subnet-471e552f | Default in ap-south-1a"> subnet-471e552f | Default in ap-south-1b</option></select></td></tr>
+<tr>
+<td>
+<b>Auto-assign Public IP </td> <td><select><option value="use subnet setting(Enable)">use subnet setting(Enable)</option>
+<option value="Enable">Enable</option>
+
+<option value="Disable">Disable</option>
+</select></td></tr>
+<tr>
+<td>
+<b>Placement group </td><td> <input type ="checkbox" name="cmd">Add instances to placement group</td></br>
+<tr>
+<td>
+<b>Capacity Reservation</td><td> <select><option value="Open">Open</option>
+<option value="None">None</option>
+</select></td></tr>
+
+</body>
+</html>
