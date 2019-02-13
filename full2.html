@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Favicon -->
+  <link href="fevicon.jpg" rel="icon" type="jpg">
+  <!-- Styles -->
+  <link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<form action="/cgi-bin/advance.cgi" method="POST">
+<div class="header">
+  <a href="aws.html" class="logo" >own cloud</a>
+  <div class="header-right">
+  <input type="text" name="search" placeholder="Search.." style="width:100%" id="search">
+</div>
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<body>
+<form id="regForm" action="/cgi-bin/iaas.cgi">
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab"><h2>Step 1: Choose Your Instance </h2>
+   <h1> choose instance </h2>
+<p>An AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch your instance0. You can select an AMI provided by AWS, our user community, or the AWS Marketplace; or you can select one of your own AMIs.</p>
+<table>
+<tr>
+<td>
+<h1> <img src ="redhat1.jpg" width="100" height="100">redhat</h1>
+<p>
+Red Hat Enterprise Linux version 7.5 (HVM), EBS General Purpose (SSD) Volume Type</p>
+</td>
+<td>
+ <input type= "button" name="cmd" value="select">
+</a></td>
+</tr>
+
+<tr>
+<td>
+<h2><img src= "ubuntu.jpg" width="100" height="100">ubuntu</h2>
+<p>Ubuntu Server 18.04 LTS (HVM),EBS General Purpose (SSD) Volume Type. </p>
+ </td>
+<td>
+ <input type= "button" name="cmd" value="select">
+</td></tr>
+<tr>
+<td>
+<h2><img src= "suse.jpg" width="100" height="100">suse linux</h2>
+<p>SUSE Linux Enterprise Server 15 (HVM), EBS General Purpose (SSD) Volume Type. Public Cloud, Advanced Systems Management, Web and Scripting,<br> and Legacy modules enabled. </p>
+ </td>
+<td>
+ <input type= "button" name="cmd" value="select">
+</td></tr>
+<tr>
+<td>
+<h2><img src= "windows.jpg" width="100" height="100">windows 2019</h2>
+<p>Microsoft Windows 2019 Datacenter edition. </p>
+ </td>
+<td>
+ <input type= "button" name="cmd" value="select">
+</td></tr>
+</table>
+</div>
+<div>
+<div class="tab">Step 2: Choose  Instance type
+<h1>
+step 2: Choose an Instance Type
+</h1>
+<p>Amazon EC2 provides a wide selection of instance types optimized to fit different use cases. Instances are virtual servers that can run applications. They have varying combinations of CPU, memory, storage, and networking capacity, and give you the flexibility to choose the appropriate mix of resources for your applications.</p>
+<table style="width:100%">
+
+<tr>
+    <th></th>
+    <th>Family</th> 
+    <th>Type</th>
+    <th>vCPUs</th>
+    <th>Memory(GiB)</th>
+    <th>instance storage(GB)</th>
+    <th>EBS-Optimized Available</th>
+    <th>Network Performance</th>
+    <th>IPv6 Support</th>
+</tr>
+<tr>
+<td>
+<input type="radio" name="cmd" >
+</td>
+<td>
+General purpose</td>
+<td>
+t2.micro</td>
+<td>
+1</td>
+<td>
+1</td>
+<td>EBS only</td>
+<td> -- </td>
+<td>Low to Moderate</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>
+<input type="radio" name="cmd" >
+</td>
+<td>
+General purpose</td>
+<td>
+t2.small</td>
+<td>
+1</td>
+<td>
+2</td>
+<td>EBS only</td>
+<td> -- </td>
+<td>Low to Moderate</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>
+<input type="radio" name="cmd" >
+</td>
+<td>
+General purpose</td>
+<td>
+t2.medium</td>
+<td>
+2</td>
+<td>
+4</td>
+<td>EBS only</td>
+<td> -- </td>
+<td>Low to Moderate</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>
+<input type="radio" name="cmd" >
+</td>
+<td>
+General purpose</td>
+<td>
+t2.large</td>
+<td>
+2</td>
+<td>
+8</td>
+<td>EBS only</td>
+<td> -- </td>
+<td>Low to Moderate</td>
+<td>yes</td>
+</tr>
+</table>
+</div>
+ 
+ <div class="tab">Step 2: Configure Instance 
+  <h1>
+Step 3: Configure Instance Details</h1>
+<p>
+Configure the instance to suit your requirements. You can launch multiple instances from the same AMI, request Spot instances to take advantage of the lower pricing, assign an access management role to the instance, and more.</p>
+<table>
+<tr>
+<td>
+<b>Number of instance</td><td>   <input type ="number" name="cmd"></td></tr>
+<tr>
+<td>
+<b>Purchasing option</td><td>  <input type ="checkbox" name="cmd">Request spot instances</td></tr>
+<tr>
+<td>
+<b>Network </td><td> <select><option value="vpc-975c7eff(default)"> vpc-975c7eff(default) </option></select></td></tr>
+<tr>
+<td>
+<b>Subnet</td><td>  <select><option value="No preference (default subnet in any Availability Zone)"> No preference (default subnet in any Availability Zone)</option>
+<option value="subnet-471e552f | Default in ap-south-1a"> subnet-471e552f | Default in ap-south-1a</option>
+<option value="subnet-471e552f | Default in ap-south-1a"> subnet-471e552f | Default in ap-south-1b</option></select></td></tr>
+<tr>
+<td>
+<b>Auto-assign Public IP </td> <td><select><option value="use subnet setting(Enable)">use subnet setting(Enable)</option>
+<option value="Enable">Enable</option>
+
+<option value="Disable">Disable</option>
+</select></td></tr>
+<tr>
+<td>
+<b>Placement group </td><td> <input type ="checkbox" name="cmd">Add instances to placement group</td></br>
+<tr>
+<td>
+<b>Capacity Reservation</td><td> <select><option value="Open">Open</option>
+<option value="None">None</option>
+</select></td></tr>
+</table>
+  </div>
+  <div class="tab">step 3: Add storage
+     <h1> Add Storage</h1>
+<p>Your instance will be launched with the following storage device settings. You can attach additional EBS volumes and instance store volumes to your instance, or edit the settings of the root volume. You can also attach additional EBS volumes after launching an instance, but not instance store volumes.</p>
+<table style="width:100%">
+
+<tr>
+    <th>Select</th>
+    <th>Volume Type</th>
+    <th>Device</th> 
+    <th>Snapshot</th>
+    <th>Size(GiB)</th>
+    <th>Volume Type</th>
+    <th>IOPS</th>
+    <th>Throughput (MB/s)</th>
+    <th>Delete on Termination</th>
+    <th>Encrypted</th>
+</tr>
+<tr>
+<td><input type ="radio" name "cmd"></td>
+<td>
+Root
+</td>
+<td>
+/dev/sda1</td>
+<td>snap-0280599e37cd696fa</td>
+<td><input type="text" name="cmd"></td>
+<td><input type="button" name="cmd" value="General Purpose SSD(gp2)">
+</td>
+<td>100 / 3000</td>
+<td>N/A</td>
+<td><input type="checkbox" name="cmd"></td>
+<td>Not Encrypted</td>
+</tr>
+<tr>
+<td><input type ="radio" name "cmd"></td>
+<td>
+Root
+</td>
+<td>
+/dev/sda1</td>
+<td>snap-0280599e37cd696fa</td>
+<td><input type="text" name="cmd"></td>
+<td><input type="button" name="cmd" value="Provisioned IOPS SSD(io1)">
+</td>
+<td>500</td>
+<td>N/A</td>
+<td><input type="checkbox" name="cmd"></td>
+<td>Not Encrypted</td>
+</tr>
+<tr>
+<td><input type ="radio" name "cmd"></td>
+<td>
+Root
+</td>
+<td>
+/dev/sda1</td>
+<td>snap-0280599e37cd696fa</td>
+<td><input type="text" name="cmd"></td>
+<td><input type="button" name="cmd" value="Magnetic(standard)">
+</td>
+<td>N/A</td>
+<td>N/A</td>
+<td><input type="checkbox" name="cmd"></td>
+<td>Not Encrypted</td>
+</tr>
+    </table>
+    <p>Note: If you are install Windows Please input 30 GiB Device size. </p>
+  </div>
+  <div class="tab">Step 4: Configure Security
+    <ul>
+ 	<li>In the Red hat Linux os you can use the username <em>root</em> and password as <em>redhat123#</em></li>
+ 	<li>In the Ubuntu Linux os you can use the username <em>ubuntu_user</em> and password as <em>ubuntu1$</em></li>
+ 	<li>In the Fedora Linux os you can use the username <em>fedora_user</em> and password as <em>fedora</em><em>123$</em></li>
+ 	<li>In the Windows os you can use the username <em>administrator</em> and password as <em>windos123@</em></li>
+ 	<li>In the open suse Linux os you can use the username <em>suse_user</em> and password as suse<em>123#</em></li>
+</ul>
+  </div>
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)" >Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+</form>
+
+<script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+    
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+    
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input")
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+ 
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+function RadioForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByName("inst")
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+ 
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+</script>
+
+
+</body>
+</html>
