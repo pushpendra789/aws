@@ -1,0 +1,484 @@
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  background-color: none;
+  padding: 20px 20px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right; 
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: none;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+/* table session */
+div {
+    margin: 0px;
+    padding: 0px;
+}
+table {
+  width:100%;
+  padding-top:0px;
+  margin-top: 0px;
+  float: top; 
+  background: white;
+  
+  
+}
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+.logo{
+  color: yellow;
+}
+
+input[type=button] {
+  width: auto;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  background-color: lightgreen;
+}
+/* Full-width input fields */
+input[type=submit] {
+  width: 70%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  background-color: red;
+  box-sizing: border-box;
+}
+
+input[type=submit]:focus{
+  background-color: #ff6347;
+  outline: none;
+}
+
+input[type=text], input[type=password],input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+  width: 100%;
+}
+
+hr {
+  border: 2px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+ .signupbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+create sidebar
+.navbar a:hover{
+  background-color: red;
+}
+
+body {margin:0;font-family:Arial}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  cursor: default;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "X";
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 10%;
+  border-radius: 10%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: 50%;
+  padding: 14px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 10%;
+  border-radius: 10%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 80;
+  left: 10;
+  background-color: lightgreen;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 8px 10px 8px 18px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: blue;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 22px; /* Increased text to enable scrolling */
+  padding: 0px 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 25px;}
+  .sidenav a {font-size: 18px;}
+}
+* {
+  box-sizing: border-box;
+}
+
+.prevBtn{
+  float: left;
+  color: red;
+}
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+
+bg-img {
+  background-image: url("cloud.img")
+  background-color: #cccccc;
+}
